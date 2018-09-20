@@ -18,6 +18,11 @@ public class Employee {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return this.name;
+    }
+
     //***************** getters and setters area *****************
     public String getName() {
         return name;
