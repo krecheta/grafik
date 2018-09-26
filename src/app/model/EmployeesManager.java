@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Class responsible for storing employees in list.
+ * Class responsible for storing employees data.
  */
 public class EmployeesManager {
     /**
@@ -33,14 +33,6 @@ public class EmployeesManager {
     }
 
     /**
-     * Employees list getter.
-     * @return - Employees list
-     */
-    public ObservableList<Employee> getEmpList() {
-        return employeesList;
-    }
-
-    /**
      * Moves employee up or down on the list.
      * @param emp - Employee
      * @param b - If true, move up. If false, move down.
@@ -52,5 +44,10 @@ public class EmployeesManager {
         } else {
             Collections.swap(employeesList, index, index+1);
         }
+    }
+
+    //***************** getters and setters area *****************
+    public ObservableList<Employee> getEmpList() {
+        return employeesList;
     }
 }

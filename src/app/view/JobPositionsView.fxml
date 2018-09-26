@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="296.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.view.JobPositionsController">
+   <children>
+      <TableView fx:id="jobPositionsTable" layoutX="15.0" layoutY="23.0" prefHeight="231.0" prefWidth="567.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" sortable="false" text="Nazwa" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="60.0" sortable="false" text="Godzina rozpoczęcia" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="60.0" sortable="false" text="Godzina zakończenia" />
+            <TableColumn fx:id="internalSymbolColumn" prefWidth="65.0" sortable="false" text="Symbol wewnętrzny" />
+            <TableColumn fx:id="externalSymbolColumn" prefWidth="65.0" sortable="false" text="Symbol zewnętrzny" />
+            <TableColumn fx:id="mondayColumn" minWidth="0.0" prefWidth="30.0" sortable="false" text="Pon." />
+            <TableColumn fx:id="tuesdayColumn" prefWidth="30.0" sortable="false" text="Wt." />
+            <TableColumn fx:id="wednesdayColumn" prefWidth="30.0" sortable="false" text="Śr." />
+            <TableColumn fx:id="thursdayColumn" prefWidth="30.0" sortable="false" text="Czw." />
+            <TableColumn fx:id="fridayColumn" prefWidth="30.0" sortable="false" text="Pt." />
+            <TableColumn fx:id="saturdayColumn" prefWidth="28.333330129882814" sortable="false" text="Sb." />
+            <TableColumn fx:id="sundayColumn" prefWidth="30.0" sortable="false" text="Ndz." />
+        </columns>
+      </TableView>
+      <Button fx:id="addJobPosButton" layoutX="248.0" layoutY="262.0" mnemonicParsing="false" onAction="#addJobPosButtonClicked" prefWidth="50.0" text="Dodaj" />
+      <Button fx:id="removeJobPosButton" layoutX="305.0" layoutY="262.0" mnemonicParsing="false" onAction="#removeJobPosButtonClicked" prefWidth="50.0" text="Usuń" />
+      <Button fx:id="nextWindowButton" layoutX="532.0" layoutY="262.0" mnemonicParsing="false" onAction="#nextWindowButtonClicked" prefWidth="50.0" text="Dalej" />
+      <Button fx:id="returnButton" layoutX="15.0" layoutY="262.0" mnemonicParsing="false" onAction="#returnButtonClicked" prefWidth="55.0" text="Wstecz" />
+      <Label layoutX="270.0" layoutY="4.0" text="Stanowiska:" />
+   </children>
+</AnchorPane>

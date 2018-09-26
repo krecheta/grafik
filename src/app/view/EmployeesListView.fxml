@@ -6,7 +6,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="388.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.EmployeesListController">
    <children>
       <ListView fx:id="employeesList" layoutX="14.0" layoutY="23.0" prefHeight="300.0" prefWidth="235.0" />
@@ -16,6 +15,6 @@
       <TextField fx:id="newEmpTextField" layoutX="14.0" layoutY="330.0" prefHeight="25.0" prefWidth="156.0" />
       <Button fx:id="addEmpButton" layoutX="179.0" layoutY="330.0" mnemonicParsing="false" onAction="#addEmpButtonOnAction" text="Dodaj" />
       <Button fx:id="removeEmpButton" layoutX="236.0" layoutY="330.0" mnemonicParsing="false" onAction="#removeEmpButtonOnAction" prefHeight="25.0" prefWidth="48.0" text="Usuń" />
-      <Button fx:id="nextWindowButton" layoutX="236.0" layoutY="365.0" mnemonicParsing="false" onAction="#removeEmpButtonOnAction" prefHeight="25.0" prefWidth="48.0" text="Dalej" />
+      <Button fx:id="nextWindowButton" layoutX="236.0" layoutY="365.0" mnemonicParsing="false" onAction="#nextWindowButtonOnAction" prefHeight="25.0" prefWidth="48.0" text="Dalej" />
    </children>
 </AnchorPane>

@@ -6,8 +6,13 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -108,6 +113,37 @@ public class EmployeesListController implements Initializable {
     }
 
     /**
+     * Listener for next window button.
+     * Goes to new window.
+     * @param event
+     */
+    @FXML
+    void nextWindowButtonOnAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/JobPositionsView.fxml"));
+            Parent parent = loader.load();
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add(getClass().getResource("../view/JobPositionsView.css").toExternalForm());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setResizable(false);
+
+            //przekazanie wartoœci do AddSignalController
+            //loader.<NewSignalController>getController().initData(signalsManager, this);
+            stage.show();
+
+        } catch(Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.initStyle(StageStyle.UTILITY);
+            alert.setHeaderText("Wystąpił błąd");
+            alert.setTitle("Błąd");
+            alert.setContentText("Spróbuj ponownie");
+            alert.showAndWait();
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * Disables buttons.
      * @param b
      */
@@ -116,4 +152,5 @@ public class EmployeesListController implements Initializable {
         moveDownButton.setDisable(b);
         removeEmpButton.setDisable(b);
     }
+
 }
